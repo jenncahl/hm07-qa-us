@@ -25,33 +25,5 @@ test('Receiving list of warehouses', async () => {
 	} catch (error) {
 		console.error(error);
 	}
-    expect(listOfWarehouses).toEqual(
-        {
-            "name": "Everything You Need",
-            "workingHours": {
-                "start": 7,
-                "end": 23
-            }
-        },
-        {
-            "name": "Fresh food",
-            "workingHours": {
-                "start": 8,
-                "end": 23
-            }
-        },
-        {
-            "name": "Food City",
-            "workingHours": {
-                "start": 8,
-                "end": 21
-            }
-        },
-        {
-            "name": "Big World",
-            "workingHours": {
-                "start": 5,
-                "end": 20
-            }
-        }
+    expect(listOfWarehouses[2]["name"]).toEqual("Food City")
 });

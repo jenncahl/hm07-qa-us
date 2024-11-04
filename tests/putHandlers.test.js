@@ -19,10 +19,10 @@ test('ifKitPriceChanges', async () => {
 	} catch (error) {
 		console.error(error);
 	}
-	expect(data["ok"]).toBe(true);	
+	expect(kit1PriceChangeResponse["ok"]).toBe(true);	
 });
 
-const kit1PriceChange = {
+const requestBody = {
     "price": 175
 };
 
@@ -34,7 +34,7 @@ test('putRequestStatusToBe200', async () => {
 			headers: {
                 'Content-Type': 'application/json' // Specify the content type
             },
-            body: JSON.stringify(kit1PriceChange)
+            body: JSON.stringify(requestBody)
 		});
 		actualStatusPutRequest=response.status
         // Extract response code status
