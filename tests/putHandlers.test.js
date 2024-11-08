@@ -30,11 +30,11 @@ test('putRequestStatusToBe200', async () => {
     let actualStatusPutRequest;
     try {
         const response = await fetch(`${config.API_URL}/api/v1/products/1` ,{
-			method: 'PUT',
-			headers: {
-                'Content-Type': 'application/json' // Specify the content type
-            },
-            body: JSON.stringify(requestBody)
+		method: 'PUT',
+		headers: {
+            'Content-Type': 'application/json' // Specify the content type
+        },
+        body: JSON.stringify(requestBody)
 		});
 		actualStatusPutRequest=response.status
         // Extract response code status
