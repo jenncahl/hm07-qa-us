@@ -18,7 +18,7 @@ const productsListBody = {
     ]
 }
 
-test('deleteRequestStatusToBe201', async () => { 
+test('should Response 201', async () => { 
     let createCartResponse;
     try {
     createCartResponse = await fetch(`${config.API_URL}/api/v1/orders`, {
@@ -52,7 +52,7 @@ test('deleteRequestStatusToBe201', async () => {
 });
 
 
-test('Checking if cart with Id=? was deleted succesfully', async () => {
+test('should delete cart with id=?', async () => {
     let createCartResponse;
     try {
         createCartResponse = await fetch(`${config.API_URL}/api/v1/orders`, {

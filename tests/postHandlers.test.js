@@ -18,7 +18,7 @@ const productsListBody = {
     ]
 }
 
-test('Creating a shopping cart', async () => {
+test('should create a shopping cart', async () => {
     let newShoppingCart;
     try {
             const response = await fetch(`${config.API_URL}/api/v1/orders`, {
@@ -56,7 +56,7 @@ const productsList = {
     ]
 }
 
-test('postRequestStatusToBe201', async () => {
+test('Should Respond 201', async () => {
     let actualStatusPostRequest;
     try {
         const response = await fetch(`${config.API_URL}/api/v1/orders` ,{

@@ -5,7 +5,7 @@ const kit1PriceChange = {
     "price": 175
 };
 
-test('ifKitPriceChanges', async () => {
+test('should change kit price', async () => {
 	let kit1PriceChangeResponse;
     try {
 		const response = await fetch(`${config.API_URL}/api/v1/products/1`, {
@@ -26,7 +26,7 @@ const requestBody = {
     "price": 175
 };
 
-test('putRequestStatusToBe200', async () => {
+test('should respond 202', async () => {
     let actualStatusPutRequest;
     try {
         const response = await fetch(`${config.API_URL}/api/v1/products/1` ,{

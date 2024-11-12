@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-undef
 const config = require('../config');
 
-test('getRequestStatusToBe200', async () => { 
+test('should response 200', async () => { 
     let actualStatusGetRequest;
     try { 
     const response = await fetch(`${config.API_URL}/api/v1/warehouses`, {
@@ -18,7 +18,7 @@ expect(actualStatusGetRequest).toBe(200);
 });
 
 
-test('Receiving list of warehouses', async () => {
+test('should receive list of warehouses', async () => {
 	let listOfWarehouses;
     try {
 	const response = await fetch(`${config.API_URL}/api/v1/warehouses`, {
