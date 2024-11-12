@@ -26,7 +26,7 @@ const requestBody = {
     "price": 175
 };
 
-test('should respond 202', async () => {
+test('should respond 200', async () => {
     let actualStatusPutRequest;
     try {
         const response = await fetch(`${config.API_URL}/api/v1/products/1` ,{
